@@ -1,0 +1,24 @@
+@mixin focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+@mixin card-surface {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+@mixin from-tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin from-desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
