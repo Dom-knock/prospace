@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +12,13 @@
     <header>
 
         <!-- Logo -->
-        <div>ProSpace Solutions</div>
-
+        <a href="index.html" aria-current="page">
+            <img src="assets/images/logo.webp" alt="Logo de ProSpace Solutions">
+        </a>
         <!-- Navigation principale -->
         <nav>
-            <a href="index.html">Accueil</a>
+            <a href="index.html" title="lien vers la page d'accueil">
+                Accueil</a>
             <a href="pages/mes-espaces.html">Mes Espaces</a>
             <a href="pages/contact.html">Contact</a>
         </nav>
@@ -33,11 +35,11 @@
 
             <p>Salles de réunion, bureaux privatifs et espaces premium disponibles à la demande dans les grandes villes françaises.</p>
 
-            <div>
-                Réservation instantanée
-                Annulation flexible
-                Support dédié
-            </div>
+            <ul>
+                <li>Réservation instantanée</li>
+                <li>Annulation flexible</li>
+                <li>Support dédié</li>
+            </ul>
 
         </section>
 
@@ -47,6 +49,56 @@
 
             <h2>Rechercher un espace</h2>
 
+            <form>
+
+                <!-- Filtre par ville -->
+                <div>
+                    <label for="ville">Ville</label>
+
+                    <select id="ville" name="ville">
+                        <option value="">Toutes les villes</option>
+                        <option value="paris">Paris</option>
+                        <option value="lyon">Lyon</option>
+                        <option value="bordeaux">Bordeaux</option>
+                        <option value="nantes">Nantes</option>
+                        <option value="marseille">Marseille</option>
+                    </select>
+                </div>
+
+                <!-- Filtre par capacité -->
+                <div>
+                    <label for="capacite">Capacité</label>
+
+                    <select id="capacite" name="capacite">
+                        <option value="">Toutes capacités</option>
+                        <option value="10">Jusqu'à 10 personnes</option>
+                        <option value="20">Jusqu'à 20 personnes</option>
+                        <option value="50">Jusqu'à 50 personnes</option>
+                    </select>
+                </div>
+
+                <!-- Filtre par équipements -->
+                <div>
+
+                    <div>
+                        <input type="checkbox" id="fibre" name="fibre">
+                        <label for="fibre">WiFi Fibre</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="pmr" name="pmr">
+                        <label for="pmr">Accès PMR</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="ecran" name="ecran">
+                        <label for="ecran">Écran 4K</label>
+                    </div>
+
+                </div>
+
+            </form>
+
         </section>
 
 
@@ -54,6 +106,119 @@
         <section>
 
             <h2>Espaces disponibles</h2>
+
+            <div>
+
+                <!-- Carte d'un espace -->
+                <article>
+
+                    <img src="assets/images/espace-wagram.webp" alt="Espace de travail Wagram Opéra">
+
+                    <h3>Espace Wagram Opéra</h3>
+
+                    <p>Paris 17e</p>
+
+                    <p>Jusqu'à 12 personnes</p>
+
+                    <p>WiFi Fibre - Accès PMR - Ecran 4K</p>
+
+                    <p>A partir de 45 € / heure</p>
+
+                    <a href="pages/espace.html?id=1">Voir la fiche</a>
+
+                </article>
+
+                <article>
+
+                    <img src="assets/images/atelier-republique-paris.webp" alt="Espace de travail Atelier République">
+
+                    <h3>Atelier République</h3>
+
+                    <p>Paris 11e</p>
+
+                    <p>Jusqu'à 8 personnes</p>
+
+                    <p>WiFi Fibre - Ecran 4K</p>
+
+                    <p>A partir de 35 € / heure</p>
+
+                    <a href="pages/espace.html?id=2">Voir la fiche</a>
+
+                </article>
+
+                <article>
+
+                    <img src="assets/images/confluence-executive.webp" alt="Espace de travail Confluence Executive Suite">
+
+                    <h3>Confluence Executive Suite</h3>
+
+                    <p>Lyon 2e</p>
+
+                    <p>Jusqu'à 20 personnes</p>
+
+                    <p>WiFi Fibre - Accès PMR - Ecran 4K</p>
+
+                    <p>A partir de 55 € / heure</p>
+
+                    <a href="pages/espace.html?id=3">Voir la fiche</a>
+
+                </article>
+
+                <article>
+
+                    <img src="assets/images/chartrons-bordeaux.webp" alt="Espace de travail Les Chartrons Board Room">
+
+                    <h3>Les Chartrons Board Room</h3>
+
+                    <p>Bordeaux</p>
+
+                    <p>Jusqu'à 16 personnes</p>
+
+                    <p>WiFi Fibre - Accès PMR</p>
+
+                    <p>A partir de 40 € / heure</p>
+
+                    <a href="pages/espace.html?id=4">Voir la fiche</a>
+
+                </article>
+
+                <article>
+
+                    <img src="assets/images/ile-nantes.webp" alt="Espace de travail Ile de Nantes Studio">
+
+                    <h3>Ile de Nantes Studio</h3>
+
+                    <p>Nantes</p>
+
+                    <p>Jusqu'à 6 personnes</p>
+
+                    <p>WiFi Fibre - Ecran 4K</p>
+
+                    <p>A partir de 28 € / heure</p>
+
+                    <a href="pages/espace.html?id=5">Voir la fiche</a>
+
+                </article>
+
+                <article>
+
+                    <img src="assets/images/vieux-port-marseille.webp" alt="Espace de travail Vieux-Port Panorama">
+
+                    <h3>Vieux-Port Panorama</h3>
+
+                    <p>Marseille</p>
+
+                    <p>Jusqu'à 14 personnes</p>
+
+                    <p>WiFi Fibre - Accès PMR</p>
+
+                    <p>A partir de 38 € / heure</p>
+
+                    <a href="pages/espace.html?id=6">Voir la fiche</a>
+
+                </article>
+
+            </div>
 
         </section>
 
