@@ -1,0 +1,72 @@
+.espaces {
+    padding: 24px;
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.liste-espaces {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.carte-espace {
+    width: 100%;
+    max-width: 360px;
+
+    background-color: $couleur-blanche;
+    border: 1px solid $couleur-bordure;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.contenu-carte {
+    padding: 16px;
+
+    h3 {
+        margin-top: 0;
+    }
+
+    p {
+        margin: 8px 0;
+    }
+}
+
+.bas-carte {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    .prix {
+        margin: 0;
+        color: $couleur-secondaire;
+        font-size: 20px;
+        font-weight: 700;
+
+        span {
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+
+    a {
+        background-color: $couleur-secondaire;
+        color: $couleur-blanche;
+        padding: 8px 12px;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+}

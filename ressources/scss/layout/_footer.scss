@@ -1,0 +1,15 @@
+.pied-page {
+    background-color: $couleur-fond-sombre;
+    color: $couleur-blanche;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: 24px;
+    padding: 32px 24px;
+
+    p {
+        margin: 0;
+    }
+}

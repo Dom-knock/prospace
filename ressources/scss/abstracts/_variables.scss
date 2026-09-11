@@ -1,29 +1,21 @@
-$color-navy: #0f172a;
-$color-navy-soft: #1e293b;
-$color-blue: #0284c7;
-$color-blue-hover: #0369a1;
-$color-blue-active: #075985;
-$color-cyan: #38bdf8;
-$color-sky-light: #f0f9ff;
-$color-border-blue: #bae6fd;
-$color-off-white: #f8fafc;
-$color-white: #ffffff;
-$color-text: #334155;
-$color-muted: #64748b;
-$color-border: #e2e8f0;
-$color-danger: #b91c1c;
-$color-danger-light: #fef2f2;
-$color-success: #166534;
-$color-success-light: #f0fdf4;
-$color-star: #f59e0b;
-$font-heading: "Outfit", Arial, sans-serif;
-$font-body: "DM Sans", Arial, sans-serif;
-$font-mono: "JetBrains Mono", Consolas, monospace;
-$font-adapted: "OpenDyslexic", Arial, sans-serif;
-$container-width: 1280px;
-$radius-small: 6px;
-$radius-medium: 10px;
-$radius-large: 16px;
-$shadow-card: 0 12px 32px rgba(15, 23, 42, 0.08);
-$transition-fast: 180ms ease;
+// Couleurs principales
+$couleur-principale: #0284c7;
+$couleur-secondaire: #38bdf8;
 
+$couleur-fond-sombre: #0f172a;
+$couleur-fond-clair: #f1f5f9;
+
+$couleur-blanche: #ffffff;
+$couleur-texte: #1d293d;
+$couleur-texte-secondaire: #45556c;
+$couleur-bordure: #e2e8f0;
+
+// Couleurs spécifiques
+$couleur-etoile: #ffb900;
+$couleur-favori: #ff2056;
+
+// ------------------------------
+// Police
+// ------------------------------
+
+$police-principale: "Inter", sans-serif;

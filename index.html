@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProSpace Solutions - Espaces de travail en France</title>
     <meta name="description" content="Trouvez un espace de travail, une salle de réunion ou un bureau professionnel avec ProSpace Solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <header>
+    <header class="entete">
 
         <!-- Logo -->
         <a href="index.html" aria-current="page">
             <img src="assets/images/logo.webp" alt="Logo de ProSpace Solutions">
         </a>
         <!-- Navigation principale -->
-        <nav>
+        <nav class="navigation-principale">
             <a href="index.html" title="lien vers la page d'accueil">
                 Accueil</a>
             <a href="pages/mes-espaces.html">Mes Espaces</a>
@@ -29,9 +34,11 @@
     <main>
 
         <!-- Section Hero -->
-        <section>
+        <section class="hero">
 
-            <h1>Trouvez votre espace de travail idéal en France</h1>
+            <p class="hero-label">Location B2B en France</p>
+
+            <h1>Trouvez votre espace de travail idéal <span>en France</span></h1>
 
             <p>Salles de réunion, bureaux privatifs et espaces premium disponibles à la demande dans les grandes villes françaises.</p>
 
@@ -45,14 +52,14 @@
 
 
         <!-- Section Recherche -->
-        <section>
+        <section class="recherche">
 
             <h2>Rechercher un espace</h2>
 
-            <form>
+            <form class="formulaire-recherche">
 
                 <!-- Filtre par ville -->
-                <div>
+                <div class="filtre">
                     <label for="ville">Ville</label>
 
                     <select id="ville" name="ville">
@@ -66,7 +73,7 @@
                 </div>
 
                 <!-- Filtre par capacité -->
-                <div>
+                <div class="filtre">
                     <label for="capacite">Capacité</label>
 
                     <select id="capacite" name="capacite">
@@ -78,7 +85,7 @@
                 </div>
 
                 <!-- Filtre par équipements -->
-                <div>
+                <div class="equipements">
 
                     <div>
                         <input type="checkbox" id="fibre" name="fibre">
@@ -107,114 +114,159 @@
 
             <h2>Espaces disponibles</h2>
 
-            <div>
+            <div class="liste-espaces">
 
                 <!-- Carte d'un espace -->
-                <article>
+                <article class="carte-espace">
 
-                    <img src="assets/images/espace-wagram.webp" alt="Espace de travail Wagram Opéra">
+                    <div class="contenu-carte">
 
-                    <h3>Espace Wagram Opéra</h3>
+                        <img src="assets/images/espace-wagram.webp" alt="Espace de travail Wagram Opéra">
 
-                    <p>Paris 17e</p>
+                        <h3>Espace Wagram Opéra</h3>
 
-                    <p>Jusqu'à 12 personnes</p>
+                        <p>Paris 17e</p>
 
-                    <p>WiFi Fibre - Accès PMR - Ecran 4K</p>
+                        <p>Jusqu'à 12 personnes</p>
 
-                    <p>A partir de 45 € / heure</p>
+                        <p>WiFi Fibre - Accès PMR - Ecran 4K</p>
 
-                    <a href="pages/espace.html?id=1">Voir la fiche</a>
+                        <div class="bas-carte">
+                            <p class="prix">45 € <span>/ heure</span></p>
+                            <a href="pages/espace.html?id=1">Voir la fiche</a>
+                        </div>
 
-                </article>
-
-                <article>
-
-                    <img src="assets/images/atelier-republique-paris.webp" alt="Espace de travail Atelier République">
-
-                    <h3>Atelier République</h3>
-
-                    <p>Paris 11e</p>
-
-                    <p>Jusqu'à 8 personnes</p>
-
-                    <p>WiFi Fibre - Ecran 4K</p>
-
-                    <p>A partir de 35 € / heure</p>
-
-                    <a href="pages/espace.html?id=2">Voir la fiche</a>
+                    </div>
 
                 </article>
 
-                <article>
+                <article class="carte-espace">
 
-                    <img src="assets/images/confluence-executive.webp" alt="Espace de travail Confluence Executive Suite">
+                    <div class="contenu-carte">
 
-                    <h3>Confluence Executive Suite</h3>
+                        <img src="assets/images/atelier-republique-paris.webp" alt="Espace de travail Atelier République">
 
-                    <p>Lyon 2e</p>
+                        <h3>Atelier République</h3>
 
-                    <p>Jusqu'à 20 personnes</p>
+                        <p>Paris 11e</p>
 
-                    <p>WiFi Fibre - Accès PMR - Ecran 4K</p>
+                        <p>Jusqu'à 8 personnes</p>
 
-                    <p>A partir de 55 € / heure</p>
+                        <p>WiFi Fibre - Ecran 4K</p>
 
-                    <a href="pages/espace.html?id=3">Voir la fiche</a>
+                        <div class="bas-carte">
 
-                </article>
+                            <p class="prix">35 € <span>/ heure</span></p>
 
-                <article>
+                            <a href="pages/espace.html?id=2">Voir la fiche</a>
 
-                    <img src="assets/images/chartrons-bordeaux.webp" alt="Espace de travail Les Chartrons Board Room">
+                        </div>
 
-                    <h3>Les Chartrons Board Room</h3>
-
-                    <p>Bordeaux</p>
-
-                    <p>Jusqu'à 16 personnes</p>
-
-                    <p>WiFi Fibre - Accès PMR</p>
-
-                    <p>A partir de 40 € / heure</p>
-
-                    <a href="pages/espace.html?id=4">Voir la fiche</a>
+                    </div>
 
                 </article>
 
-                <article>
+                <article class="carte-espace">
 
-                    <img src="assets/images/ile-nantes.webp" alt="Espace de travail Ile de Nantes Studio">
+                    <div class="contenu-carte">
 
-                    <h3>Ile de Nantes Studio</h3>
+                        <img src="assets/images/confluence-executive.webp" alt="Espace de travail Confluence Executive Suite">
 
-                    <p>Nantes</p>
+                        <h3>Confluence Executive Suite</h3>
 
-                    <p>Jusqu'à 6 personnes</p>
+                        <p>Lyon 2e</p>
 
-                    <p>WiFi Fibre - Ecran 4K</p>
+                        <p>Jusqu'à 20 personnes</p>
 
-                    <p>A partir de 28 € / heure</p>
+                        <p>WiFi Fibre - Accès PMR - Ecran 4K</p>
 
-                    <a href="pages/espace.html?id=5">Voir la fiche</a>
+                        <div class="bas-carte">
+
+                            <p class="prix">55 € <span>/ heure</span></p>
+
+                            <a href="pages/espace.html?id=3">Voir la fiche</a>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
-                <article>
+                <article class="carte-espace">
 
-                    <img src="assets/images/vieux-port-marseille.webp" alt="Espace de travail Vieux-Port Panorama">
+                    <div class="contenu-carte">
 
-                    <h3>Vieux-Port Panorama</h3>
+                        <img src="assets/images/chartrons-bordeaux.webp" alt="Espace de travail Les Chartrons Board Room">
 
-                    <p>Marseille</p>
+                        <h3>Les Chartrons Board Room</h3>
 
-                    <p>Jusqu'à 14 personnes</p>
+                        <p>Bordeaux</p>
 
-                    <p>WiFi Fibre - Accès PMR</p>
+                        <p>Jusqu'à 16 personnes</p>
 
-                    <p>A partir de 38 € / heure</p>
+                        <p>WiFi Fibre - Accès PMR</p>
 
-                    <a href="pages/espace.html?id=6">Voir la fiche</a>
+                        <div class="bas-carte">
+
+                            <p class="prix">40 € <span>/ heure</span></p>
+
+                            <a href="pages/espace.html?id=4">Voir la fiche</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="carte-espace">
+
+                    <div class="contenu-carte">
+
+                        <img src="assets/images/ile-nantes.webp" alt="Espace de travail Ile de Nantes Studio">
+
+                        <h3>Ile de Nantes Studio</h3>
+
+                        <p>Nantes</p>
+
+                        <p>Jusqu'à 6 personnes</p>
+
+                        <p>WiFi Fibre - Ecran 4K</p>
+
+                        <div class="bas-carte">
+
+                            <p class="prix">28 € <span>/ heure</span></p>
+
+                            <a href="pages/espace.html?id=5">Voir la fiche</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="carte-espace">
+
+                    <div class="contenu-carte">
+
+                        <img src="assets/images/vieux-port-marseille.webp" alt="Espace de travail Vieux-Port Panorama">
+
+                        <h3>Vieux-Port Panorama</h3>
+
+                        <p>Marseille</p>
+
+                        <p>Jusqu'à 14 personnes</p>
+
+                        <p>WiFi Fibre - Accès PMR</p>
+
+                        <div class="bas-carte">
+
+                            <p class="prix">38 € <span>/ heure</span></p>
+
+                            <a href="pages/espace.html?id=6">Voir la fiche</a>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
@@ -225,7 +277,7 @@
     </main>
 
 
-    <footer>
+    <footer class="pied-page">
 
         <div>
             ProSpace Solutions
