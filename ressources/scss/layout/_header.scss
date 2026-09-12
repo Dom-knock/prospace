@@ -26,3 +26,16 @@
         color: $couleur-secondaire;
     }
 }
+
+@media (max-width: 600px) {
+
+    .entete {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navigation-principale {
+        width: 100%;
+        justify-content: center;
+    }
+}

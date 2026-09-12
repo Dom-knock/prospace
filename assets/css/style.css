@@ -30,6 +30,16 @@ body {
   color: #38bdf8;
 }
 
+@media (max-width: 600px) {
+  .entete {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .navigation-principale {
+    width: 100%;
+    justify-content: center;
+  }
+}
 .hero {
   background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url("../images/espace-travail-hero.webp");
   background-size: cover;
@@ -195,6 +205,88 @@ body {
 }
 .pied-page p {
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  .pied-page {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.espaces-sauvegardes {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+.espaces-sauvegardes .entete-sauvegardes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.espaces-sauvegardes .entete-sauvegardes h1 {
+  margin-bottom: 5px;
+}
+.espaces-sauvegardes .entete-sauvegardes p {
+  margin: 0;
+}
+
+.carte-sauvegardee {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 12px;
+}
+.carte-sauvegardee img {
+  width: 180px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.carte-sauvegardee .informations-espace {
+  flex: 1;
+}
+.carte-sauvegardee .informations-espace h2 {
+  margin: 0 0 8px;
+}
+.carte-sauvegardee .informations-espace p {
+  margin: 5px 0;
+}
+
+.carte-sauvegardee a {
+  background-color: #38bdf8;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.carte-sauvegardee button {
+  background-color: #ffffff;
+  color: #1d293d;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.liste-sauvegardes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .entete-sauvegardes {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .carte-sauvegardee {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

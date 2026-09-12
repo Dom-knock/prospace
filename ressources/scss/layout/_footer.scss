@@ -13,3 +13,11 @@
         margin: 0;
     }
 }
+
+@media (max-width: 600px) {
+
+    .pied-page {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
