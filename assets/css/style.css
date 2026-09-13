@@ -288,5 +288,130 @@ body {
     align-items: flex-start;
   }
 }
+.galerie-espace {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 8px;
+}
+.galerie-espace img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.galerie-espace img:first-child {
+  grid-row: span 2;
+  height: 408px;
+}
+
+@media (max-width: 600px) {
+  .galerie-espace {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 12px;
+  }
+  .galerie-espace img {
+    height: 120px;
+  }
+  .galerie-espace img:first-child {
+    grid-column: 1/3;
+    grid-row: auto;
+    height: 220px;
+  }
+}
+.information-espace {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.details-espace {
+  flex: 1;
+}
+.details-espace h2 {
+  margin-top: 0;
+}
+
+.liste-equipements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.liste-equipements p {
+  width: 45%;
+  margin: 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.tarifs-espace {
+  width: 280px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+.tarifs-espace h2 {
+  margin-top: 0;
+}
+.tarifs-espace p {
+  display: flex;
+  justify-content: space-between;
+}
+.tarifs-espace button,
+.tarifs-espace a {
+  display: block;
+  margin-top: 12px;
+  padding: 10px 12px;
+  text-align: center;
+  border-radius: 6px;
+}
+.tarifs-espace button {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ff2056;
+  color: #ff2056;
+}
+.tarifs-espace a {
+  background-color: #38bdf8;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.capacite-espace {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px 24px;
+  background-color: #BAE6FD;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+.capacite-espace h2 {
+  margin-top: 0;
+}
+.capacite-espace p {
+  margin: 8px 0;
+}
+
+@media (max-width: 600px) {
+  .information-espace {
+    flex-direction: column;
+  }
+  .liste-equipements {
+    flex-direction: column;
+  }
+  .liste-equipements p {
+    width: auto;
+  }
+  .tarifs-espace {
+    width: auto;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,149 @@
+.galerie-espace {
+    max-width: 1200px;
+    margin: 20px auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    img:first-child {
+        grid-row: span 2;
+        height: 408px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .galerie-espace {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 12px;
+
+        img {
+            height: 120px;
+        }
+
+        img:first-child {
+            grid-column: 1 / 3;
+            grid-row: auto;
+            height: 220px;
+        }
+    }
+}
+
+.information-espace {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 24px;
+
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.details-espace {
+    flex: 1;
+
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.liste-equipements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    p {
+        width: 45%;
+        margin: 0;
+        padding: 10px;
+
+        background-color: $couleur-blanche;
+        border: 1px solid $couleur-bordure;
+        border-radius: 6px;
+    }
+}
+
+.tarifs-espace {
+    width: 280px;
+    padding: 20px;
+
+    background-color: $couleur-blanche;
+    border: 1px solid $couleur-bordure;
+    border-radius: 8px;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    p {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button,
+    a {
+        display: block;
+        margin-top: 12px;
+        padding: 10px 12px;
+        text-align: center;
+        border-radius: 6px;
+    }
+
+    button {
+        width: 100%;
+        background-color: $couleur-blanche;
+        border: 1px solid $couleur-favori;
+        color: $couleur-favori;
+    }
+
+    a {
+        background-color: $couleur-secondaire;
+        color: $couleur-blanche;
+        text-decoration: none;
+    }
+}
+
+.capacite-espace {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px 24px;
+
+    background-color: $couleur-bleu-clair;
+    border: 1px solid $couleur-bordure;
+    border-radius: 8px;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    p {
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .information-espace {
+        flex-direction: column;
+    }
+
+    .liste-equipements {
+        flex-direction: column;
+
+        p {
+            width: auto;
+        }
+    }
+
+    .tarifs-espace {
+        width: auto;
+    }
+}
