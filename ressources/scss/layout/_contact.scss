@@ -175,6 +175,65 @@
     }
 }
 
+.information-contact {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.coordonnees {
+    background-color: $couleur-fond-sombre;
+    color: $couleur-blanche;
+    padding: 20px;
+    border-radius: 8px;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    h3 {
+        margin: 0 0 4px;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $couleur-texte-secondaire;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.titre-information {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.reponse-contact {
+    background-color: $couleur-bleu-clair;
+}
+
+.titre-information {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 @media (max-width: 600px) {
 
     .contact-principal {

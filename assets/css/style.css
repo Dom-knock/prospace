@@ -617,6 +617,59 @@ body {
   font-weight: 600;
 }
 
+.information-contact {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.information-contact img {
+  width: 20px;
+  height: 20px;
+}
+
+.coordonnees {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.coordonnees h2 {
+  margin-top: 0;
+}
+.coordonnees h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #45556c;
+}
+.coordonnees p {
+  margin: 0;
+}
+
+.titre-information {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.titre-information img {
+  width: 20px;
+  height: 20px;
+}
+
+.reponse-contact {
+  background-color: #BAE6FD;
+}
+
+.titre-information {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.titre-information img {
+  width: 20px;
+  height: 20px;
+}
+
 @media (max-width: 600px) {
   .contact-principal {
     flex-direction: column;
