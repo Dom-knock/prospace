@@ -37,43 +37,57 @@
             <div class="entete-sauvegardes">
                 <div>
                     <h1>Mes Espaces Sauvegardés</h1>
-                    <p>2 espaces dans votre sélection</p>
+                    <p id="nombre-favoris">2 espaces dans votre sélection</p>
                 </div>
 
-                <button type="button">Vider ma sélection</button>
+                <button id="vider-selection" type="button">Vider ma sélection</button>
             </div>
 
             <!-- Liste des espaces sauvegardés -->
             <div class="liste-sauvegardes">
 
                 <!-- Espace Wagram Opéra -->
-                <article class="carte-sauvegardee">
+                <article class="carte-sauvegardee" data-id="1">
 
-                    <img
-                        src="../assets/images/espace-wagram.webp"
-                        alt="Salle de réunion Espace Wagram Opéra"
-                    >
+                    <img src="../assets/images/espace-wagram.webp" alt="Salle de réunion Espace Wagram Opéra">
 
                     <div class="informations-espace">
                         <h2>Espace Wagram Opéra</h2>
 
-                        <p>Paris 17e</p>
+                        <p>Paris 8e</p>
                         <p>Jusqu'à 12 personnes</p>
                         <p><strong>45 €</strong> / heure</p>
                     </div>
 
                     <a href="espace.html?id=1">Voir fiche</a>
 
-                    <button type="button">Retirer</button>
+                    <button class="retirer-favori" type="button">Retirer</button>
 
                 </article>
 
-                <article class="carte-sauvegardee">
+                <!-- Espace Atelier République -->
+                <article class="carte-sauvegardee" data-id="2">
 
-                    <img
-                        src="../assets/images/confluence-executive.webp"
-                        alt="Espace de travail Confluence Executive Suite"
-                    >
+                    <img src="../assets/images/atelier-republique-paris.webp" alt="Espace de travail Atelier République">
+
+                    <div class="informations-espace">
+                        <h2>Atelier République</h2>
+
+                        <p>Paris 11e</p>
+                        <p>Jusqu'à 8 personnes</p>
+                        <p><strong>35 €</strong> / heure</p>
+                    </div>
+
+                    <a href="espace.html?id=2">Voir fiche</a>
+
+                    <button class="retirer-favori" type="button">Retirer</button>
+
+                </article>
+
+                <!-- Espace Confluence Executive -->
+                <article class="carte-sauvegardee" data-id="3">
+
+                    <img src="../assets/images/confluence-executive.webp" alt="Espace de travail Confluence Executive Suite">
 
                     <div class="informations-espace">
                         <h2>Confluence Executive Suite</h2>
@@ -85,9 +99,68 @@
 
                     <a href="espace.html?id=3">Voir fiche</a>
 
-                    <button type="button">Retirer</button>
+                    <button class="retirer-favori" type="button">Retirer</button>
 
                 </article>
+
+                <!-- Espace Les Chartrons Board Room -->
+                <article class="carte-sauvegardee" data-id="4">
+
+                    <img src="../assets/images/chartrons-bordeaux.webp" alt="Espace de travail Les Chartrons Board Room">
+
+                    <div class="informations-espace">
+                        <h2>Les Chartrons Board Room</h2>
+
+                        <p>Bordeaux</p>
+                        <p>Jusqu'à 16 personnes</p>
+                        <p><strong>40 €</strong> / heure</p>
+                    </div>
+
+                    <a href="espace.html?id=4">Voir fiche</a>
+
+                    <button class="retirer-favori" type="button">Retirer</button>
+
+                </article>
+
+                <!-- Espace Ile de Nantes Studio -->
+                <article class="carte-sauvegardee" data-id="5">
+
+                    <img src="../assets/images/ile-nantes.webp" alt="Espace de travail Ile de Nantes Studio">
+
+                    <div class="informations-espace">
+                        <h2>Ile de Nantes Studio</h2>
+
+                        <p>Nantes</p>
+                        <p>Jusqu'à 6 personnes</p>
+                        <p><strong>28 €</strong> / heure</p>
+                    </div>
+
+                    <a href="espace.html?id=5">Voir fiche</a>
+
+                    <button class="retirer-favori" type="button">Retirer</button>
+
+                </article>
+
+                <!-- Espace Vieux-Port Panorama -->
+                <article class="carte-sauvegardee" data-id="5">
+
+                    <img src="../assets/images/vieux-port-marseille.webp" alt="Espace de travail Vieux-Port Panorama">
+
+                    <div class="informations-espace">
+                        <h2>Vieux-Port Panorama</h2>
+
+                        <p>Marseille</p>
+                        <p>Jusqu'à 14 personnes</p>
+                        <p><strong>38 €</strong> / heure</p>
+                    </div>
+
+                    <a href="espace.html?id=6">Voir fiche</a>
+
+                    <button class="retirer-favori" type="button">Retirer</button>
+
+                </article>
+
+
 
             </div>
 
@@ -150,6 +223,6 @@
         </div>
 
     </footer>
-
+    <script src="../assets/js/mes-espaces.js"></script>
 </body>
 </html>
