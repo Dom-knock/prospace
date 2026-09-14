@@ -16,6 +16,8 @@ const filtrePmr = document.querySelector("#pmr");
 const filtreEcran = document.querySelector("#ecran");
 // on recupere le nombre d'espace disponible
 const nombreEspaces = document.querySelector("#nombre-espaces");
+// on recupere les boutons permettant d'ajouter un espaces dans les favoris
+const boutonsFavoris = document.querySelectorAll(".bouton-favori");
 
 //----------------------------------------------------------------------------
 // evenements
@@ -33,7 +35,7 @@ filtrePmr.addEventListener("change", filtrerEspaces);
 filtreEcran.addEventListener("change", filtrerEspaces);
 
 //----------------------------------------------------------------------------
-// fonctions
+// fonctions pour les recherches et les filtres
 //----------------------------------------------------------------------------
 
 // fonction pour recuperer la ville choisie
@@ -148,3 +150,52 @@ function filtrerEspaces() {
     nombreEspaces.textContent = compteur + " Espaces disponibles";
   }
 }
+
+//----------------------------------------------------------------------------
+// fonctions pour les favoris
+//----------------------------------------------------------------------------
+// on recuper les favoris enristrés dans le navigateur
+const favorisEnregistres = localStorage.getItem("favoris");
+// tableau qui contient les favoris
+let favoris = [];
+// si des favoris existent on transforme alors le texte JSON en tableau
+if (favorisEnregistres !== null) {
+  favoris = JSON.parse(favorisEnregistres);
+}
+
+// on parcours tous les boutons favoris
+boutonsFavoris.forEach(function (bouton) {
+  // on recupere l'identifiant de l'espace concerné
+  const idEspace = bouton.dataset.id;
+  // on recupere l'image coeur
+  const imageFavori = bouton.querySelector("img");
+
+  // on verifie au chargement si l'espace est deja dans les favoris
+  if (favoris.includes(idEspace)) {
+    imageFavori.src = "assets/icons/icone-favori-plein.svg";
+  } else {
+    imageFavori.src = "assets/icons/icone-favori.svg";
+  }
+
+  // on ecoute le clic sur chaque bouton
+  bouton.addEventListener("click", function () {
+    //on verifie si l'espace choisie n'est pas deja dans les favoris
+    if (favoris.includes(idEspace) === false) {
+      // on ajoute un espace au favoris
+      favoris.push(idEspace);
+      // on affiche le coeur plein
+      imageFavori.src = "assets/icons/icone-favori-plein.svg";
+    } else {
+      // retire l'espace des favoris
+      favoris = favoris.filter(function (id) {
+        return id !== idEspace;
+      });
+      // on affiche le coeur vide
+      imageFavori.src = "assets/icons/icone-favori.svg";
+    }
+    // on enregistre le tableau des favoris dans le localStorage
+    localStorage.setItem("favoris", JSON.stringify(favoris));
+    // Test dans la console
+    console.log(idEspace);
+  });
+});
