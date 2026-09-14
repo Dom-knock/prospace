@@ -17,12 +17,12 @@
     <header class="entete">
 
         <!-- Logo -->
-        <a href="index.html" aria-current="page">
+        <a href="index.html" title="lien vers la page d'accueil">
             <img src="assets/images/logo.webp" alt="Logo de ProSpace Solutions">
         </a>
         <!-- Navigation principale -->
         <nav class="navigation-principale">
-            <a href="index.html" title="lien vers la page d'accueil">
+            <a href="index.html" title="lien vers la page d'accueil" aria-current="page">
                 Accueil</a>
             <a href="pages/mes-espaces.html">Mes Espaces</a>
             <a href="pages/contact.html">Contact</a>
@@ -54,12 +54,11 @@
         <!-- Section Recherche -->
         <section class="recherche">
 
-            <h2>Rechercher un espace</h2>
+            <div class="recherche-contenu">
 
-            <form class="formulaire-recherche">
+                <span class="titre-filtre">FILTRER</span>
 
-                <!-- Filtre par ville -->
-                <div class="filtre">
+                <div class="champ-filtre">
                     <label for="ville">Ville</label>
 
                     <select id="ville" name="ville">
@@ -72,93 +71,194 @@
                     </select>
                 </div>
 
-                <!-- Filtre par capacité -->
-                <div class="filtre">
+                <div class="champ-filtre">
                     <label for="capacite">Capacité</label>
 
                     <select id="capacite" name="capacite">
                         <option value="">Toutes capacités</option>
-                        <option value="10">Jusqu'à 10 personnes</option>
-                        <option value="20">Jusqu'à 20 personnes</option>
-                        <option value="50">Jusqu'à 50 personnes</option>
+                        <option value="6">6 personnes</option>
+                        <option value="8">8 personnes</option>
+                        <option value="12">12 personnes</option>
+                        <option value="16">16 personnes</option>
+                        <option value="20">20 personnes</option>
                     </select>
                 </div>
 
-                <!-- Filtre par équipements -->
-                <div class="equipements">
+                <div class="equipements-filtre">
 
-                    <div>
-                        <input type="checkbox" id="fibre" name="fibre">
-                        <label for="fibre">WiFi Fibre</label>
-                    </div>
+                    <label>
+                        <input type="checkbox" name="wifi">
+                        WiFi Fibre
+                    </label>
 
-                    <div>
-                        <input type="checkbox" id="pmr" name="pmr">
-                        <label for="pmr">Accès PMR</label>
-                    </div>
+                    <label>
+                        <input type="checkbox" name="pmr">
+                        Accès PMR
+                    </label>
 
-                    <div>
-                        <input type="checkbox" id="ecran" name="ecran">
-                        <label for="ecran">Écran 4K</label>
-                    </div>
+                    <label>
+                        <input type="checkbox" name="ecran">
+                        Écran 4K
+                    </label>
 
                 </div>
 
-            </form>
+            </div>
 
         </section>
 
 
         <!-- Section Espaces -->
-        <section>
+        <section class="espaces">
 
-            <h2>Espaces disponibles</h2>
+            <h2>6 Espaces disponibles</h2>
 
             <div class="liste-espaces">
 
                 <!-- Carte d'un espace -->
-                <article class="carte-espace">
-
+                <div class="carte-espace">
                     <div class="contenu-carte">
 
+                    <div class="image-carte">
                         <img src="assets/images/espace-wagram.webp" alt="Espace de travail Wagram Opéra">
 
-                        <h3>Espace Wagram Opéra</h3>
+                        <button class="bouton-favori" type="button">
+                            <img src="assets/icons/icone-favori.svg" alt="">
+                        </button>
+                    </div>
 
-                        <p>Paris 17e</p>
+                    <h3>Espace Wagram Opéra</h3>
 
-                        <p>Jusqu'à 12 personnes</p>
+                    <p class="localisation-carte">
+                        <img src="assets/icons/icone-localisation.svg" alt="">
+                        Paris 8e
+                    </p>
 
-                        <p>WiFi Fibre - Accès PMR - Ecran 4K</p>
+                    <div class="note-carte">
 
-                        <div class="bas-carte">
-                            <p class="prix">45 € <span>/ heure</span></p>
-                            <a href="pages/espace.html?id=1">Voir la fiche</a>
+                        <div class="etoiles-carte">
+                            <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                            <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                            <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                            <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                            <img src="assets/icons/icone-etoile-pleine.svg" alt="">
                         </div>
+
+                        <span>4,8</span>
+                        <span class="nombre-avis">(34 avis)</span>
 
                     </div>
 
+                    <div class="details-carte">
+
+                        <span>
+                            <img src="assets/icons/icone-utilisateurs.svg" alt="">
+                            12 pers.
+                        </span>
+
+                        <span>
+                            <img src="assets/icons/icone-wifi.svg" alt="">
+                            Fibre
+                        </span>
+
+                        <span>
+                            <img src="assets/icons/icone-accessibilite.svg" alt="">
+                            PMR
+                        </span>
+
+                        <span>
+                            <img src="assets/icons/icone-ecran.svg" alt="">
+                            4K
+                        </span>
+
+                    </div>
+
+                    <div class="bas-carte">
+
+                        <p class="prix">
+                            45 € <span>/ heure</span>
+                        </p>
+
+                        <a href="pages/espace.html?id=1">
+                            Voir la fiche
+                        </a>
+
+                    </div>
+                </div>
+                </div>
                 </article>
 
                 <article class="carte-espace">
 
                     <div class="contenu-carte">
 
-                        <img src="assets/images/atelier-republique-paris.webp" alt="Espace de travail Atelier République">
+                        <div class="image-carte">
+                            <img
+                                src="assets/images/atelier-republique-paris.webp"
+                                alt="Atelier République"
+                            >
+
+                            <button class="bouton-favori" type="button">
+                                <img
+                                    src="assets/icons/icone-favori-plein.svg"
+                                    alt=""
+                                >
+                            </button>
+                        </div>
 
                         <h3>Atelier République</h3>
 
-                        <p>Paris 11e</p>
+                        <p class="localisation-carte">
+                            <img
+                                src="assets/icons/icone-localisation.svg"
+                                alt=""
+                            >
+                            Paris 11e
+                        </p>
 
-                        <p>Jusqu'à 8 personnes</p>
+                        <div class="note-carte">
 
-                        <p>WiFi Fibre - Ecran 4K</p>
+                            <div class="etoiles-carte">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                            </div>
+
+                            <span>4,6</span>
+                            <span class="nombre-avis">(51 avis)</span>
+
+                        </div>
+
+                        <div class="details-carte">
+
+                            <span>
+                                <img src="assets/icons/icone-utilisateurs.svg" alt="">
+                                8 pers.
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-wifi.svg" alt="">
+                                Fibre
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-ecran.svg" alt="">
+                                4K
+                            </span>
+
+                        </div>
 
                         <div class="bas-carte">
 
-                            <p class="prix">35 € <span>/ heure</span></p>
+                            <p class="prix">
+                                35 € <span>/ heure</span>
+                            </p>
 
-                            <a href="pages/espace.html?id=2">Voir la fiche</a>
+                            <a href="pages/espace.html?id=2">
+                                Voir la fiche
+                            </a>
 
                         </div>
 
@@ -170,19 +270,69 @@
 
                     <div class="contenu-carte">
 
-                        <img src="assets/images/confluence-executive.webp" alt="Espace de travail Confluence Executive Suite">
+                        <div class="image-carte">
+                            <img
+                                src="assets/images/confluence-executive.webp"
+                                alt="Confluence Executive Suite"
+                            >
+
+                            <button class="bouton-favori" type="button">
+                                <img
+                                    src="assets/icons/icone-favori.svg"
+                                    alt=""
+                                >
+                            </button>
+                        </div>
 
                         <h3>Confluence Executive Suite</h3>
 
-                        <p>Lyon 2e</p>
+                        <p class="localisation-carte">
+                            <img src="assets/icons/icone-localisation.svg" alt="">
+                            Lyon 2e
+                        </p>
 
-                        <p>Jusqu'à 20 personnes</p>
+                        <div class="note-carte">
+                            <div class="etoiles-carte">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                            </div>
 
-                        <p>WiFi Fibre - Accès PMR - Ecran 4K</p>
+                            <span>4,9</span>
+                            <span class="nombre-avis">(22 avis)</span>
+                        </div>
+
+                        <div class="details-carte">
+
+                            <span>
+                                <img src="assets/icons/icone-utilisateurs.svg" alt="">
+                                20 pers.
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-wifi.svg" alt="">
+                                Fibre
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-accessibilite.svg" alt="">
+                                PMR
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-ecran.svg" alt="">
+                                4K
+                            </span>
+
+                        </div>
 
                         <div class="bas-carte">
 
-                            <p class="prix">55 € <span>/ heure</span></p>
+                            <p class="prix">
+                                55 € <span>/ heure</span>
+                            </p>
 
                             <a href="pages/espace.html?id=3">Voir la fiche</a>
 
@@ -196,19 +346,61 @@
 
                     <div class="contenu-carte">
 
-                        <img src="assets/images/chartrons-bordeaux.webp" alt="Espace de travail Les Chartrons Board Room">
+                        <div class="image-carte">
+                            <img
+                                src="assets/images/chartrons-bordeaux.webp"
+                                alt="Les Chartrons Board Room"
+                            >
+
+                            <button class="bouton-favori" type="button">
+                                <img src="assets/icons/icone-favori-plein.svg" alt="">
+                            </button>
+                        </div>
 
                         <h3>Les Chartrons Board Room</h3>
 
-                        <p>Bordeaux</p>
+                        <p class="localisation-carte">
+                            <img src="assets/icons/icone-localisation.svg" alt="">
+                            Bordeaux
+                        </p>
 
-                        <p>Jusqu'à 16 personnes</p>
+                        <div class="note-carte">
+                            <div class="etoiles-carte">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                            </div>
 
-                        <p>WiFi Fibre - Accès PMR</p>
+                            <span>4,7</span>
+                            <span class="nombre-avis">(18 avis)</span>
+                        </div>
+
+                        <div class="details-carte">
+
+                            <span>
+                                <img src="assets/icons/icone-utilisateurs.svg" alt="">
+                                16 pers.
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-wifi.svg" alt="">
+                                Fibre
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-accessibilite.svg" alt="">
+                                PMR
+                            </span>
+
+                        </div>
 
                         <div class="bas-carte">
 
-                            <p class="prix">40 € <span>/ heure</span></p>
+                            <p class="prix">
+                                40 € <span>/ heure</span>
+                            </p>
 
                             <a href="pages/espace.html?id=4">Voir la fiche</a>
 
@@ -222,19 +414,61 @@
 
                     <div class="contenu-carte">
 
-                        <img src="assets/images/ile-nantes.webp" alt="Espace de travail Ile de Nantes Studio">
+                        <div class="image-carte">
+                            <img
+                                src="assets/images/ile-nantes.webp"
+                                alt="Île de Nantes Studio"
+                            >
 
-                        <h3>Ile de Nantes Studio</h3>
+                            <button class="bouton-favori" type="button">
+                                <img src="assets/icons/icone-favori-plein.svg" alt="">
+                            </button>
+                        </div>
 
-                        <p>Nantes</p>
+                        <h3>Île de Nantes Studio</h3>
 
-                        <p>Jusqu'à 6 personnes</p>
+                        <p class="localisation-carte">
+                            <img src="assets/icons/icone-localisation.svg" alt="">
+                            Nantes
+                        </p>
 
-                        <p>WiFi Fibre - Ecran 4K</p>
+                        <div class="note-carte">
+                            <div class="etoiles-carte">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                            </div>
+
+                            <span>4,5</span>
+                            <span class="nombre-avis">(63 avis)</span>
+                        </div>
+
+                        <div class="details-carte">
+
+                            <span>
+                                <img src="assets/icons/icone-utilisateurs.svg" alt="">
+                                6 pers.
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-wifi.svg" alt="">
+                                Fibre
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-ecran.svg" alt="">
+                                4K
+                            </span>
+
+                        </div>
 
                         <div class="bas-carte">
 
-                            <p class="prix">28 € <span>/ heure</span></p>
+                            <p class="prix">
+                                28 € <span>/ heure</span>
+                            </p>
 
                             <a href="pages/espace.html?id=5">Voir la fiche</a>
 
@@ -248,19 +482,61 @@
 
                     <div class="contenu-carte">
 
-                        <img src="assets/images/vieux-port-marseille.webp" alt="Espace de travail Vieux-Port Panorama">
+                        <div class="image-carte">
+                            <img
+                                src="assets/images/vieux-port-marseille.webp"
+                                alt="Vieux-Port Panorama"
+                            >
+
+                            <button class="bouton-favori" type="button">
+                                <img src="assets/icons/icone-favori-plein.svg" alt="">
+                            </button>
+                        </div>
 
                         <h3>Vieux-Port Panorama</h3>
 
-                        <p>Marseille</p>
+                        <p class="localisation-carte">
+                            <img src="assets/icons/icone-localisation.svg" alt="">
+                            Marseille
+                        </p>
 
-                        <p>Jusqu'à 14 personnes</p>
+                        <div class="note-carte">
+                            <div class="etoiles-carte">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile.svg" alt="">
+                            </div>
 
-                        <p>WiFi Fibre - Accès PMR</p>
+                            <span>4,4</span>
+                            <span class="nombre-avis">(29 avis)</span>
+                        </div>
+
+                        <div class="details-carte">
+
+                            <span>
+                                <img src="assets/icons/icone-utilisateurs.svg" alt="">
+                                14 pers.
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-wifi.svg" alt="">
+                                Fibre
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-accessibilite.svg" alt="">
+                                PMR
+                            </span>
+
+                        </div>
 
                         <div class="bas-carte">
 
-                            <p class="prix">38 € <span>/ heure</span></p>
+                            <p class="prix">
+                                38 € <span>/ heure</span>
+                            </p>
 
                             <a href="pages/espace.html?id=6">Voir la fiche</a>
 
@@ -282,12 +558,12 @@
         <div class="footer-contenu">
 
             <div class="footer-marque">
-                <img src="../assets/images/logo.webp" alt="ProSpace Solutions">
+                <img src="assets/images/logo.webp" alt="ProSpace Solutions">
 
                 <p>Location d'espaces professionnels en France pour les entreprises
                 et indépendants exigeants.</p>
 
-                <a href="contact.html">Nous contacter</a>
+                <a href="pages/contact.html">Nous contacter</a>
             </div>
 
             <div class="footer-colonne">

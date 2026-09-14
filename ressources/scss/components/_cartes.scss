@@ -17,6 +17,11 @@
     margin: 0 auto;
 }
 
+.espaces h2 {
+    max-width: 1140px;
+    margin: 0 auto 20px;
+}
+
 .carte-espace {
     width: 100%;
     max-width: 360px;
@@ -48,13 +53,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 16px;
+
 
     .prix {
         margin: 0;
         color: $couleur-secondaire;
         font-size: 20px;
         font-weight: 700;
+        white-space: nowrap;
 
         span {
             font-size: 12px;
@@ -68,5 +74,97 @@
         padding: 8px 12px;
         border-radius: 6px;
         text-decoration: none;
+    }
+}
+
+.image-carte {
+    position: relative;
+
+    > img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.bouton-favori {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 50%;
+    background-color: $couleur-blanche;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.localisation-carte {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.note-carte {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.etoiles-carte {
+    display: flex;
+    gap: 2px;
+
+    img {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.nombre-avis {
+    color: $couleur-texte-secondaire;
+    font-size: 0.8rem;
+}
+
+.details-carte {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+
+    span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        padding: 4px 8px;
+
+        background-color: $couleur-fond-clair;
+        border-radius: 12px;
+
+        font-size: 0.8rem;
+        color: $couleur-texte-secondaire;
+    }
+
+    img {
+        width: 14px;
+        height: 14px;
     }
 }

@@ -83,53 +83,75 @@ body {
   }
 }
 .recherche {
-  padding: 24px;
   background-color: #ffffff;
-}
-.recherche h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
+  padding: 20px 24px;
 }
 
-.formulaire-recherche {
+.recherche-contenu {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
   align-items: end;
+  gap: 18px;
+  flex-wrap: wrap;
 }
-.formulaire-recherche > div {
+
+.titre-filtre {
+  font-size: 12px;
+  font-weight: 600;
+  color: #45556c;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.champ-filtre {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
-.formulaire-recherche label {
+.champ-filtre label {
   font-weight: 600;
 }
-.formulaire-recherche select {
-  padding: 10px 12px;
+.champ-filtre select {
+  padding: 10px 14px;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   background-color: #ffffff;
 }
 
-.equipements {
+.equipements-filtre {
   display: flex;
-  flex-direction: row !important;
-  flex-wrap: wrap;
-  gap: 16px;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 8px;
 }
-.equipements div {
+.equipements-filtre label {
   display: flex;
   align-items: center;
   gap: 6px;
+  font-weight: 600;
 }
 
-.filtre {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.champ-filtre > label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
+@media (max-width: 600px) {
+  .recherche-contenu {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .equipements-filtre {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .espaces {
   padding: 24px;
 }
@@ -145,6 +167,11 @@ body {
   gap: 24px;
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.espaces h2 {
+  max-width: 1140px;
+  margin: 0 auto 20px;
 }
 
 .carte-espace {
@@ -174,13 +201,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 16px;
 }
 .bas-carte .prix {
   margin: 0;
   color: #38bdf8;
   font-size: 20px;
   font-weight: 700;
+  white-space: nowrap;
 }
 .bas-carte .prix span {
   font-size: 12px;
@@ -192,6 +219,85 @@ body {
   padding: 8px 12px;
   border-radius: 6px;
   text-decoration: none;
+}
+
+.image-carte {
+  position: relative;
+}
+.image-carte > img {
+  width: 100%;
+  display: block;
+}
+
+.bouton-favori {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.bouton-favori img {
+  width: 18px;
+  height: 18px;
+}
+
+.localisation-carte {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.localisation-carte img {
+  width: 16px;
+  height: 16px;
+}
+
+.note-carte {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.etoiles-carte {
+  display: flex;
+  gap: 2px;
+}
+.etoiles-carte img {
+  width: 14px;
+  height: 14px;
+}
+
+.nombre-avis {
+  color: #45556c;
+  font-size: 0.8rem;
+}
+
+.details-carte {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.details-carte span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #45556c;
+}
+.details-carte img {
+  width: 14px;
+  height: 14px;
 }
 
 .pied-page {
