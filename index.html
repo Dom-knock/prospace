@@ -87,17 +87,17 @@
                 <div class="equipements-filtre">
 
                     <label>
-                        <input type="checkbox" name="wifi">
+                        <input type="checkbox" id="fibre" name="fibre">
                         WiFi Fibre
                     </label>
 
                     <label>
-                        <input type="checkbox" name="pmr">
+                        <input type="checkbox" id="pmr" name="pmr">
                         Accès PMR
                     </label>
 
                     <label>
-                        <input type="checkbox" name="ecran">
+                        <input type="checkbox" id="ecran" name="ecran">
                         Écran 4K
                     </label>
 
@@ -111,84 +111,86 @@
         <!-- Section Espaces -->
         <section class="espaces">
 
-            <h2>6 Espaces disponibles</h2>
+            <h2 id="nombre-espaces">6 Espaces disponibles</h2>
 
             <div class="liste-espaces">
 
-                <!-- Carte d'un espace -->
-                <div class="carte-espace">
+                <!-- Carte espace Wagram-->
+                <article class="carte-espace" data-ville="paris" data-capacite="12" data-fibre="true" data-pmr="true" data-ecran="true">
+
                     <div class="contenu-carte">
 
-                    <div class="image-carte">
-                        <img src="assets/images/espace-wagram.webp" alt="Espace de travail Wagram Opéra">
+                        <div class="image-carte">
+                            <img src="assets/images/espace-wagram.webp" alt="Espace de travail Wagram Opéra">
 
-                        <button class="bouton-favori" type="button">
-                            <img src="assets/icons/icone-favori.svg" alt="">
-                        </button>
-                    </div>
-
-                    <h3>Espace Wagram Opéra</h3>
-
-                    <p class="localisation-carte">
-                        <img src="assets/icons/icone-localisation.svg" alt="">
-                        Paris 8e
-                    </p>
-
-                    <div class="note-carte">
-
-                        <div class="etoiles-carte">
-                            <img src="assets/icons/icone-etoile-pleine.svg" alt="">
-                            <img src="assets/icons/icone-etoile-pleine.svg" alt="">
-                            <img src="assets/icons/icone-etoile-pleine.svg" alt="">
-                            <img src="assets/icons/icone-etoile-pleine.svg" alt="">
-                            <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                            <button class="bouton-favori" type="button">
+                                <img src="assets/icons/icone-favori.svg" alt="">
+                            </button>
                         </div>
 
-                        <span>4,8</span>
-                        <span class="nombre-avis">(34 avis)</span>
+                        <h3>Espace Wagram Opéra</h3>
 
-                    </div>
-
-                    <div class="details-carte">
-
-                        <span>
-                            <img src="assets/icons/icone-utilisateurs.svg" alt="">
-                            12 pers.
-                        </span>
-
-                        <span>
-                            <img src="assets/icons/icone-wifi.svg" alt="">
-                            Fibre
-                        </span>
-
-                        <span>
-                            <img src="assets/icons/icone-accessibilite.svg" alt="">
-                            PMR
-                        </span>
-
-                        <span>
-                            <img src="assets/icons/icone-ecran.svg" alt="">
-                            4K
-                        </span>
-
-                    </div>
-
-                    <div class="bas-carte">
-
-                        <p class="prix">
-                            45 € <span>/ heure</span>
+                        <p class="localisation-carte">
+                            <img src="assets/icons/icone-localisation.svg" alt="">
+                            Paris 8e
                         </p>
 
-                        <a href="pages/espace.html?id=1">
-                            Voir la fiche
-                        </a>
+                        <div class="note-carte">
 
+                            <div class="etoiles-carte">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                                <img src="assets/icons/icone-etoile-pleine.svg" alt="">
+                            </div>
+
+                            <span>4,8</span>
+                            <span class="nombre-avis">(34 avis)</span>
+
+                        </div>
+
+                        <div class="details-carte">
+
+                            <span>
+                                <img src="assets/icons/icone-utilisateurs.svg" alt="">
+                                12 pers.
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-wifi.svg" alt="">
+                                Fibre
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-accessibilite.svg" alt="">
+                                PMR
+                            </span>
+
+                            <span>
+                                <img src="assets/icons/icone-ecran.svg" alt="">
+                                4K
+                            </span>
+
+                        </div>
+
+                        <div class="bas-carte">
+
+                            <p class="prix">
+                                45 € <span>/ heure</span>
+                            </p>
+
+                            <a href="pages/espace.html?id=1">
+                                Voir la fiche
+                            </a>
+
+                        </div>
                     </div>
-                </div>
-                </div>
+
                 </article>
 
-                <article class="carte-espace">
+                <!-- Carte espace Republique-->
+                <article class="carte-espace" data-ville="paris" data-capacite="8" data-fibre="true" data-pmr="false" data-ecran="true">
 
                     <div class="contenu-carte">
 
@@ -266,7 +268,8 @@
 
                 </article>
 
-                <article class="carte-espace">
+                <!-- Carte espace Confluence executive-->
+                <article class="carte-espace" data-ville="lyon" data-capacite="20" data-fibre="true" data-pmr="true" data-ecran="true">
 
                     <div class="contenu-carte">
 
@@ -342,7 +345,8 @@
 
                 </article>
 
-                <article class="carte-espace">
+                <!-- Carte espace Chartrons Bordeaux-->
+                <article class="carte-espace" data-ville="bordeaux" data-capacite="16" data-fibre="true" data-pmr="true" data-ecran="false">
 
                     <div class="contenu-carte">
 
@@ -410,7 +414,8 @@
 
                 </article>
 
-                <article class="carte-espace">
+                <!-- Carte espace Ile Nantes -->
+                <article class="carte-espace" data-ville="nantes" data-capacite="6" data-fibre="true" data-pmr="false" data-ecran="true">
 
                     <div class="contenu-carte">
 
@@ -478,7 +483,8 @@
 
                 </article>
 
-                <article class="carte-espace">
+                <!-- Carte espace vieux port marseille-->
+                <article class="carte-espace" data-ville="marseille" data-capacite="14" data-fibre="true" data-pmr="true" data-ecran="false">
 
                     <div class="contenu-carte">
 
@@ -608,6 +614,9 @@
         </div>
 
     </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/index.js"></script>
 
 </body>
 
