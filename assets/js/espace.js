@@ -23,6 +23,8 @@ const imageTertiaire = document.querySelector("#image-tertiaire");
 const arianeVille = document.querySelector("#ariane-ville");
 const arianeNom = document.querySelector("#ariane-nom");
 const boutonFavori = document.querySelector("#bouton-favori");
+// on recupere le lien vers la page contact
+const lienContact = document.querySelector("#lien-contact");
 
 // ------------------------------------------------------------
 // chargement des données JSON
@@ -47,6 +49,8 @@ async function afficherEspace() {
 
   // on recupere l'identifiant de l'espace
   const idEspace = parametres.get("id");
+  // on ajoute l'identifiant de l'espace au lien vers la page contact
+  lienContact.href = "contact.html?id=" + idEspace;
 
   console.log(idEspace);
   console.log(espacesJson);
