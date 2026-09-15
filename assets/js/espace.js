@@ -19,40 +19,44 @@ const listeEquipements = document.querySelector("#liste-equipements");
 const imagePrincipale = document.querySelector("#image-principale");
 const imageSecondaire = document.querySelector("#image-secondaire");
 const imageTertiaire = document.querySelector("#image-tertiaire");
+// on recupere les elements du fil d'ariane
+const arianeVille = document.querySelector("#ariane-ville");
+const arianeNom = document.querySelector("#ariane-nom");
+const boutonFavori = document.querySelector("#bouton-favori");
 
 // ------------------------------------------------------------
 // chargement des données JSON
 // ------------------------------------------------------------
 
 async function chargerEspaces() {
-  // On récupère le fichier JSON
+  // on recupere le fichier JSON
   const reponse = await fetch("../assets/js/espaces.json");
 
-  // On transforme la réponse en données JavaScript
+  // on transforme la réponse en données JS
   const donnees = await reponse.json();
   // on retourne les donnée recuperés
   return donnees;
 }
 
 async function afficherEspace() {
-  // On récupère les espaces depuis le fichier JSON
+  // on recupere les espaces depuis le fichier JSON
   const espacesJson = await chargerEspaces();
 
-  // On récupère les paramètres présents dans l'URL
+  // on recupere les paramètres présents dans l'URL
   const parametres = new URLSearchParams(window.location.search);
 
-  // On récupère l'identifiant de l'espace
+  // on recupere l'identifiant de l'espace
   const idEspace = parametres.get("id");
 
   console.log(idEspace);
   console.log(espacesJson);
 
-  // On recherche dans le JSON l'espace correspondant à l'identifiant
+  // on recherche dans le JSON l'espace correspondant à l'identifiant
   const espaceSelectionne = espacesJson.find(function (espace) {
     return espace.id === idEspace;
   });
 
-  // Test
+  // test
   console.log(espaceSelectionne);
 
   // on affiche les informations de l'espace sélectionné
@@ -69,8 +73,11 @@ async function afficherEspace() {
   // on gere le nombre de personne
   capaciteEspace.textContent =
     "Jusqu'à " + espaceSelectionne.capacite + " personnes";
+  // on met à jour le fil d'ariane
+  arianeVille.textContent = espaceSelectionne.ville;
+  arianeNom.textContent = espaceSelectionne.nom;
 
-  // on parcours les equipements de l'espace sélectionné
+  // on parcours les equipements de l'espace selectionné
   espaceSelectionne.equipements.forEach(function (equipement) {
     // On crée un paragraphe
     const elementEquipement = document.createElement("p");
@@ -84,6 +91,47 @@ async function afficherEspace() {
 }
 
 afficherEspace();
+
+// on recupere les favoris enregistrés
+const favorisEnregistres = localStorage.getItem("favoris");
+
+// on prepare le tableau des favoris
+let favoris = [];
+
+// si des favoris existent deja on transforme le JSON en tableau JS
+if (favorisEnregistres !== null) {
+  favoris = JSON.parse(favorisEnregistres);
+}
+
+// on recupere l'identifiant present dans l'url
+const parametres = new URLSearchParams(window.location.search);
+const idEspace = parametres.get("id");
+
+// on verifie si l'espace est deja dans les favoris
+if (favoris.includes(idEspace)) {
+  boutonFavori.textContent = "Déjà sauvegardé";
+} else {
+  boutonFavori.textContent = "Sauvegarder en favoris";
+}
+boutonFavori.addEventListener("click", function () {
+  // on recupere l'identifiant present dans l'url
+  const parametres = new URLSearchParams(window.location.search);
+  const idEspace = parametres.get("id");
+
+  // si l'espace n'est pas encore dans les favoris
+  if (favoris.includes(idEspace) === false) {
+    // On ajoute son identifiant au tableau
+    favoris.push(idEspace);
+
+    // on enregistre le nouveau tableau dans le localStorage
+    localStorage.setItem("favoris", JSON.stringify(favoris));
+    // on modifie le texte du bouton
+    boutonFavori.textContent = "Déjà sauvegardé";
+  }
+
+  // Test
+  console.log(favoris);
+});
 
 //------------------------------------------------------------
 // données des espaces
