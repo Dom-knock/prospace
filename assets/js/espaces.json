@@ -1,0 +1,148 @@
+[
+    {
+        "id": "1",
+        "nom": "Espace Wagram Opéra",
+        "ville": "Paris 8e",
+        "adresse": "14 avenue de Wagram, 75008 Paris",
+        "capacite": 12,
+        "prixHeure": 45,
+        "prixDemiJournee": 160,
+        "prixJournee": 280,
+        "description": "Au cœur du 8e arrondissement, à deux pas de l'Arc de Triomphe, l'Espace Wagram Opéra offre un cadre premium pour vos réunions stratégiques et présentations clients.",
+        "equipements": [
+            "WiFi Fibre 1 Gb/s",
+            "Écran 4K 86 pouces",
+            "Visioconférence intégrée",
+            "Tableau blanc interactif",
+            "Accès PMR complet",
+            "Climatisation réversible",
+            "Café & eau inclus",
+            "Parking sécurisé"
+        ],
+        "images": [
+            "../assets/images/espace-wagram.webp",
+            "../assets/images/espace-wagram-opera-table-reunion.webp",
+            "../assets/images/espace-travail-hero.webp"
+        ]
+    },
+
+    {
+        "id": "2",
+        "nom": "Atelier République",
+        "ville": "Paris 11e",
+        "adresse": "Paris 11e",
+        "capacite": 8,
+        "prixHeure": 35,
+        "prixDemiJournee": 120,
+        "prixJournee": 220,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "equipements": [
+            "WiFi Fibre 1 Gb/s",
+            "Écran 4K 86 pouces",
+            "Visioconférence intégrée",
+            "Tableau blanc interactif",
+            "Climatisation réversible",
+            "Café & eau inclus"
+        ],
+        "images": [
+            "../assets/images/atelier-republique-paris.webp",
+            "../assets/images/atelier-republique-salle-reunion.webp",
+            "../assets/images/atelier-republique-espace-travail.webp"
+        ]
+    },
+    {
+        "id": "3",
+        "nom": "Confluence Executive Suite",
+        "ville": "Lyon 2e",
+        "adresse": "Lyon 2e",
+        "capacite": 20,
+        "prixHeure": 55,
+        "prixDemiJournee": 200,
+        "prixJournee": 350,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "equipements": [
+            "WiFi Fibre 1 Gb/s",
+            "Écran 4K 86 pouces",
+            "Accès PMR complet",
+            "Visioconférence intégrée",
+            "Tableau blanc interactif",
+            "Climatisation réversible"
+        ],
+        "images": [
+            "../assets/images/confluence-executive-suite-lyon.webp",
+            "../assets/images/confluence-executive-suite-salle-reunion.webp",
+            "../assets/images/confluence-executive-suite-mobilier.webp"
+        ]
+    },
+    {
+        "id": "4",
+        "nom": "Les Chartrons Board Room",
+        "ville": "Bordeaux",
+        "adresse": "Bordeaux",
+        "capacite": 16,
+        "prixHeure": 40,
+        "prixDemiJournee": 145,
+        "prixJournee": 260,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "equipements": [
+            "WiFi Fibre 1 Gb/s",
+            "Accès PMR complet",
+            "Visioconférence intégrée",
+            "Tableau blanc interactif",
+            "Climatisation réversible",
+            "Café & eau inclus"
+        ],
+        "images": [
+            "../assets/images/chartrons-bordeaux.webp",
+            "../assets/images/chartrons-board-room-salle-reunion.webp",
+            "../assets/images/chartrons-board-room-fauteuils.webp"
+        ]
+    },
+    {
+        "id": "5",
+        "nom": "Île de Nantes Studio",
+        "ville": "Nantes",
+        "adresse": "Nantes",
+        "capacite": 6,
+        "prixHeure": 28,
+        "prixDemiJournee": 100,
+        "prixJournee": 180,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "equipements": [
+            "WiFi Fibre 1 Gb/s",
+            "Écran 4K 86 pouces",
+            "Visioconférence intégrée",
+            "Climatisation réversible",
+            "Café & eau inclus"
+        ],
+        "images": [
+            "../assets/images/ile-nantes.webp",
+            "../assets/images/ile-nantes-studio-espace-travail.webp",
+            "../assets/images/ile-nantes-studio-fauteuils.webp"
+        ]
+    },
+    {
+        "id": "6",
+        "nom": "Vieux-Port Panorama",
+        "ville": "Marseille",
+        "adresse": "Marseille",
+        "capacite": 14,
+        "prixHeure": 38,
+        "prixDemiJournee": 135,
+        "prixJournee": 240,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "equipements": [
+            "WiFi Fibre 1 Gb/s",
+            "Accès PMR complet",
+            "Visioconférence intégrée",
+            "Tableau blanc interactif",
+            "Climatisation réversible",
+            "Café & eau inclus"
+        ],
+        "images": [
+            "../assets/images/vieux-port-panorama-marseille.webp",
+            "../assets/images/vieux-port-panorama-salle-reunion.webp",
+            "../assets/images/espace-travail-hero.webp"
+        ]
+    }
+]

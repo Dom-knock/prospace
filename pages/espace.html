@@ -37,27 +37,23 @@
 
             <p>Accueil > Paris 8e > Espace Wagram Opéra</p>
 
-            <h1>Espace Wagram Opéra</h1>
+            <h1 id="nom-espace">Espace Wagram Opéra</h1>
 
-            <p>
-                14 avenue de Wagram, 75008 Paris
-                - 4,8
-                - 34 avis vérifiés
-            </p>
+            <p><span id="adresse-espace">14 avenue de Wagram, 75008 Paris</span>- 4,8 - 34 avis vérifiés</p>
 
         </section>
 
         <!-- Section galerie -->
         <section class="galerie-espace">
 
-            <img src="../assets/images/espace-wagram.webp"
-                alt="Salle de réunion de l'Espace Wagram Opéra">
+            <img id="image-principale" src="../assets/images/espace-wagram.webp"
+                alt="Espace Wagram Opéra">
 
-            <img src="../assets/images/atelier-republique-paris.webp"
+            <img id="image-secondaire" src="../assets/images/espace-travail-hero.webp"
                 alt="Salle de réunion avec table de travail">
 
-            <img src="../assets/images/ile-nantes.webp"
-                alt="Espace de travail avec fauteuils">
+            <img id="image-tertiaire" src="../assets/images/espace-wagram-opera-table-reunion.webp"
+                alt="Table de réunion de l'Espace Wagram Opéra">
 
         </section>
 
@@ -69,24 +65,11 @@
 
                 <h2>À propos de cet espace</h2>
 
-                <p>
-                    Au cœur du 8e arrondissement, à deux pas de l'Arc de Triomphe,
-                    l'Espace Wagram Opéra offre un cadre premium pour vos réunions
-                    stratégiques et présentations clients.
-                </p>
+                <p id="description-espace">Au coeur du 8e arrondissement, à deux pas de l'Arc de Triomphe,l'Espace Wagram Opéra offre un cadre premium pour vos réunions stratégiques et présentations clients.</p>
 
                 <h2>Équipements inclus</h2>
 
-                <div class="liste-equipements">
-
-                    <p>WiFi Fibre 1 Gb/s</p>
-                    <p>Écran 4K 86"</p>
-                    <p>Visioconférence intégrée</p>
-                    <p>Tableau blanc interactif</p>
-                    <p>Accès PMR complet</p>
-                    <p>Climatisation réversible</p>
-                    <p>Café & eau inclus</p>
-                    <p>Parking sécurisé</p>
+                <div class="liste-equipements" id="liste-equipements">
 
                 </div>
 
@@ -98,9 +81,9 @@
 
                 <h2>Tarifs</h2>
 
-                <p>À l'heure : <strong>45 €</strong></p>
-                <p>Demi-journée : <strong>160 €</strong></p>
-                <p>Journée complète : <strong>280 €</strong></p>
+                <p>À l'heure : <strong id="prix-heure">45 €</strong></p>
+                <p>Demi-journée : <strong id="prix-demi-journee">160 €</strong></p>
+                <p>Journée complète : <strong id="prix-journee">280 €</strong></p>
 
                 <button type="button">Sauvegarder en favoris</button>
 
@@ -115,13 +98,9 @@
 
             <h2>Capacité & Configuration</h2>
 
-            <p>
-                Jusqu'à 12 personnes
-            </p>
+            <p id="capacite-espace">Jusqu'à 12 personnes</p>
 
-            <p>
-                Configuration modulable : théâtre, classe, U, boardroom...
-            </p>
+            <p>Configuration modulable : théâtre, classe, U, boardroom...</p>
 
         </section>
 
@@ -182,6 +161,6 @@
         </div>
 
     </footer>
-
+    <script src="../assets/js/espace.js"></script>
 </body>
 </html>
