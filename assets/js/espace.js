@@ -52,16 +52,10 @@ async function afficherEspace() {
   // on ajoute l'identifiant de l'espace au lien vers la page contact
   lienContact.href = "contact.html?id=" + idEspace;
 
-  console.log(idEspace);
-  console.log(espacesJson);
-
   // on recherche dans le JSON l'espace correspondant à l'identifiant
   const espaceSelectionne = espacesJson.find(function (espace) {
     return espace.id === idEspace;
   });
-
-  // test
-  console.log(espaceSelectionne);
 
   // on affiche les informations de l'espace sélectionné
   nomEspace.textContent = espaceSelectionne.nom;
@@ -132,93 +126,4 @@ boutonFavori.addEventListener("click", function () {
     // on modifie le texte du bouton
     boutonFavori.textContent = "Déjà sauvegardé";
   }
-
-  // Test
-  console.log(favoris);
 });
-
-//------------------------------------------------------------
-// données des espaces
-//------------------------------------------------------------
-
-// les informations sur les differents espaces
-const espaces = [
-  {
-    id: "1",
-    nom: "Espace Wagram Opéra",
-    ville: "Paris 8e",
-    adresse: "14 avenue de Wagram, 75008 Paris",
-    capacite: 12,
-    prixHeure: 45,
-    prixDemiJournee: 160,
-    prixJournee: 280,
-    description:
-      "Au coeur du 8e arrondissement, à deux pas de l'Arc de Triomphe, l'Espace Wagram Opéra offre un cadre premium pour vos réunions stratégiques et présentations clients.",
-    equipements: [
-      "WiFi Fibre 1 Gb/s",
-      'Écran 4K 86"',
-      "Visioconférence intégrée",
-      "Tableau blanc interactif",
-      "Accès PMR complet",
-      "Climatisation réversible",
-      "Café & eau inclus",
-      "Parking sécurisé",
-    ],
-    images: [
-      "../assets/images/espace-wagram.webp",
-      "../assets/images/espace-travail-hero.webp",
-      "../assets/images/espace-wagram-opera-table-reunion.webp",
-    ],
-  },
-
-  {
-    id: "2",
-    nom: "Atelier République",
-    ville: "Paris 11e",
-    capacite: 8,
-    prixHeure: 35,
-  },
-
-  {
-    id: "3",
-    nom: "Confluence Executive Suite",
-    ville: "Lyon 2e",
-    capacite: 20,
-    prixHeure: 55,
-  },
-
-  {
-    id: "4",
-    nom: "Les Chartrons Board Room",
-    ville: "Bordeaux",
-    capacite: 16,
-    prixHeure: 40,
-  },
-
-  {
-    id: "5",
-    nom: "Île de Nantes Studio",
-    ville: "Nantes",
-    capacite: 6,
-    prixHeure: 28,
-  },
-
-  {
-    id: "6",
-    nom: "Vieux-Port Panorama",
-    ville: "Marseille",
-    capacite: 14,
-    prixHeure: 38,
-  },
-];
-
-//console de test
-console.log(espaces);
-
-//------------------------------------------------------------
-// recherche de l'espace
-//------------------------------------------------------------
-
-//------------------------------------------------------------
-// affichage des donées
-//------------------------------------------------------------

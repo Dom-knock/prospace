@@ -38,13 +38,7 @@ cartesSauvegardees.forEach(function (carte) {
   }
 });
 
-// on met à jour le texte selon le nombre d'espaces disponibles
-// si il est strictement egal à 1 on met pas de s sinon on en met partout
-if (favoris.length === 1) {
-  nombreFavoris.textContent = favoris.length + " espace dans votre sélection";
-} else {
-  nombreFavoris.textContent = favoris.length + " espaces dans votre sélection";
-}
+mettreAJourCompteur();
 
 //----------------------------------------------------------------------------
 // suppression des favoris

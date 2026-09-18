@@ -1,8 +1,12 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// liste et cartes des espaces
 .espaces {
     padding: 24px;
 
     h2 {
-        margin-top: 0;
+        @include contenu-centre;
         margin-bottom: 20px;
     }
 }
@@ -17,10 +21,6 @@
     margin: 0 auto;
 }
 
-.espaces h2 {
-    max-width: 1140px;
-    margin: 0 auto 20px;
-}
 
 .carte-espace {
     width: 100%;
@@ -37,6 +37,7 @@
     }
 }
 
+// contenu de la carte
 .contenu-carte {
     padding: 16px;
 
@@ -77,13 +78,9 @@
     }
 }
 
+// image et bouton favoris
 .image-carte {
     position: relative;
-
-    > img {
-        width: 100%;
-        display: block;
-    }
 }
 
 .bouton-favori {
@@ -110,6 +107,7 @@
     }
 }
 
+// information de la carte
 .localisation-carte {
     display: flex;
     align-items: center;

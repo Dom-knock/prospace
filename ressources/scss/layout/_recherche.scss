@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+
+// zone de recherche et des filtres
 .recherche {
     background-color: $couleur-blanche;
     padding: 20px 24px;
@@ -23,10 +26,6 @@
     flex-direction: column;
     gap: 6px;
 
-    label {
-        font-weight: 600;
-    }
-
     select {
         padding: 10px 14px;
         border: 1px solid $couleur-bordure;
@@ -35,6 +34,7 @@
     }
 }
 
+// filtre par equipement
 .equipements-filtre {
     display: flex;
     align-items: center;
@@ -49,6 +49,7 @@
     }
 }
 
+// pour cacher les labels
 .champ-filtre > label {
     position: absolute;
     width: 1px;
@@ -61,6 +62,7 @@
     border: 0;
 }
 
+// adaptation en responsive
 @media (max-width: 600px) {
 
     .recherche-contenu {

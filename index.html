@@ -61,6 +61,7 @@
                 <div class="champ-filtre">
                     <label for="ville">Ville</label>
 
+                    <!-- filtre de recherche par ville -->
                     <select id="ville" name="ville">
                         <option value="">Toutes les villes</option>
                         <option value="paris">Paris</option>
@@ -74,6 +75,7 @@
                 <div class="champ-filtre">
                     <label for="capacite">Capacité</label>
 
+                    <!-- filtre de recherche par capacité minimum -->
                     <select id="capacite" name="capacite">
                         <option value="">Toutes capacités</option>
                         <option value="6">6 personnes</option>
@@ -84,6 +86,7 @@
                     </select>
                 </div>
 
+                <!-- filtres de recherche par equipements -->
                 <div class="equipements-filtre">
 
                     <label>
@@ -115,14 +118,14 @@
 
             <div class="liste-espaces">
 
-                <!-- Carte espace Wagram-->
+                <!-- les attributs data sont utilisés par JavaScript pour filtrer les espaces -->
                 <article class="carte-espace" data-ville="paris" data-capacite="12" data-fibre="true" data-pmr="true" data-ecran="true">
 
                     <div class="contenu-carte">
 
                         <div class="image-carte">
                             <img src="assets/images/espace-wagram.webp" alt="Espace de travail Wagram Opéra">
-
+                            <!-- l'identifiant data-id permet à JavaScript de gerer les favoris -->
                             <button class="bouton-favori" data-id="1" type="button" aria-label="Ajouter Espace Wagram Opéra aux favoris">
                                 <img src="assets/icons/icone-favori.svg" alt="">
                             </button>

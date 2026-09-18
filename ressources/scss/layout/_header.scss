@@ -1,3 +1,7 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// entete et navigation
 .entete {
     background-color: $couleur-fond-sombre;
     padding: 16px 24px;
@@ -27,15 +31,10 @@
     }
 }
 
+// adaptation en responsive
 @media (max-width: 600px) {
-
     .entete {
-        flex-direction: column;
+        @include disposition-colonne;
         gap: 12px;
-    }
-
-    .navigation-principale {
-        width: 100%;
-        justify-content: center;
     }
 }

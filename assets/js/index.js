@@ -35,56 +35,8 @@ filtrePmr.addEventListener("change", filtrerEspaces);
 filtreEcran.addEventListener("change", filtrerEspaces);
 
 //----------------------------------------------------------------------------
-// fonctions pour les recherches et les filtres
+// filtres
 //----------------------------------------------------------------------------
-
-// fonction pour recuperer la ville choisie
-function filtrerVille(evenement) {
-  // recupere la ville choisi dans le menu
-  const villeChoisie = evenement.target.value;
-
-  console.log(villeChoisie);
-}
-
-// fonction pour examiner les 6 cartes
-function filtrerVille(evenement) {
-  // on recupere la ville choisie dans le menu
-  const villeChoisie = evenement.target.value;
-
-  // on parcourt toutes les cartes
-  cartes.forEach(function (carte) {
-    //on récupere la ville de la carte
-    const villeCarte = carte.dataset.ville;
-
-    // on verifie si la carte correspond à notre choix OU si
-    // on selectionne toutes les villes
-    if (villeChoisie === "" || villeCarte === villeChoisie) {
-      carte.style.display = "block";
-    } else {
-      carte.style.display = "none";
-    }
-  });
-}
-
-// on filtre les cartes selon la capacité choisie
-function filtrerCapacite(evenement) {
-  // on recupere la capacité choisie dans le menu
-  const capaciteChoisie = evenement.target.value;
-
-  // on parcours toutes les cartes
-  cartes.forEach(function (carte) {
-    // on reucpoere la capacité enregistrée dans la carte
-    const capaciteCarte = Number(carte.dataset.capacite);
-
-    // on affiche la carte si la capacité convient
-    // OU si l'utilisateur sélectionne toutes capacités
-    if (capaciteChoisie === "" || capaciteCarte >= Number(capaciteChoisie)) {
-      carte.style.display = "block";
-    } else {
-      carte.style.display = "none";
-    }
-  });
-}
 
 // on filtre les espaces selon la ville, la capacité, la fibre, le pmr et la 4K choisies
 function filtrerEspaces() {
@@ -100,7 +52,7 @@ function filtrerEspaces() {
   // pour un ecran 4K si coché
   const ecranChoisi = filtreEcran.checked;
 
-  // Compte le nombre de cartes visibles
+  // compte le nombre de cartes visibles
   let compteur = 0;
 
   // on parcourt toutes les cartes
@@ -195,7 +147,5 @@ boutonsFavoris.forEach(function (bouton) {
     }
     // on enregistre le tableau des favoris dans le localStorage
     localStorage.setItem("favoris", JSON.stringify(favoris));
-    // Test dans la console
-    console.log(idEspace);
   });
 });

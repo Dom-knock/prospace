@@ -20,9 +20,6 @@ const parametres = new URLSearchParams(window.location.search);
 // on recupere l'id de l'espace
 const idEspace = parametres.get("id");
 
-// Test
-console.log(idEspace);
-
 //------------------------------------------------------------
 // chargement de l'espace
 //------------------------------------------------------------
@@ -45,14 +42,14 @@ async function chargerEspace() {
     espaceSelectionne.nom +
     ".";
 
-  // On selectionne automatiquement le sujet du formulaire
+  // on selectionne automatiquement le sujet du formulaire
   sujet.value = "information";
-
-  // Test
-  console.log(espaceSelectionne);
 }
 
-chargerEspace();
+// je charge et preremplis uniquement si l'url à un id
+if (idEspace !== null) {
+  chargerEspace();
+}
 
 //------------------------------------------------------------
 // validation d'un formulaire

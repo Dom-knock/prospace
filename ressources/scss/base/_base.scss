@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+
+// styles generaux
 body {
     margin: 0;
     font-family: $police-principale;

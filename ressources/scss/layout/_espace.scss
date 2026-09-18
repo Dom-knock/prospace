@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+
+// page de detail d'un espace
 .galerie-espace {
     max-width: 1200px;
     margin: 20px auto;
@@ -19,6 +22,7 @@
     }
 }
 
+// responsive galerie
 @media (max-width: 600px) {
 
     .galerie-espace {
@@ -129,6 +133,7 @@
     }
 }
 
+// responsive des informations
 @media (max-width: 600px) {
 
     .information-espace {

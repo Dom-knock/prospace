@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+
+// section hero de l'accueil
 .hero {
     background-image:
         linear-gradient(
@@ -8,10 +11,8 @@
 
     background-size: cover;
     background-position: center;
-
     color: $couleur-blanche;
     padding: 60px 24px;
-
 
     .hero-label {
         color: $couleur-secondaire;
@@ -49,6 +50,7 @@
     }
 }
 
+// adaptation en responsive
 @media (min-width: 1024px) {
     .hero {
         h1 {

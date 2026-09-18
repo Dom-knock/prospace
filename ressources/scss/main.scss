@@ -1,10 +1,13 @@
-@import "abstracts/variables";
-@import "base/base";
-@import "layout/header";
-@import "layout/hero";
-@import "layout/recherche";
-@import "components/cartes";
-@import "layout/footer";
-@import "layout/mes-espaces";
-@import "layout/espace";
-@import "layout/contact";
+// variables et styles generaux
+@use "abstracts/variables";
+@use "base/base";
+// mise en page de l'accueil
+@use "layout/header";
+@use "layout/hero";
+@use "layout/recherche";
+@use "components/cartes";
+// mise en page commune et page secondaire
+@use "layout/footer";
+@use "layout/mes-espaces";
+@use "layout/espace";
+@use "layout/contact";

@@ -35,10 +35,6 @@ body {
     flex-direction: column;
     gap: 12px;
   }
-  .navigation-principale {
-    width: 100%;
-    justify-content: center;
-  }
 }
 .hero {
   background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url("../images/espace-travail-hero.webp");
@@ -107,9 +103,6 @@ body {
   flex-direction: column;
   gap: 6px;
 }
-.champ-filtre label {
-  font-weight: 600;
-}
 .champ-filtre select {
   padding: 10px 14px;
   border: 1px solid #e2e8f0;
@@ -156,7 +149,9 @@ body {
   padding: 24px;
 }
 .espaces h2 {
-  margin-top: 0;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
 }
 
@@ -167,11 +162,6 @@ body {
   gap: 24px;
   max-width: 1140px;
   margin: 0 auto;
-}
-
-.espaces h2 {
-  max-width: 1140px;
-  margin: 0 auto 20px;
 }
 
 .carte-espace {
@@ -223,10 +213,6 @@ body {
 
 .image-carte {
   position: relative;
-}
-.image-carte > img {
-  width: 100%;
-  display: block;
 }
 
 .bouton-favori {
@@ -407,16 +393,6 @@ body {
   object-fit: cover;
   border-radius: 6px;
 }
-.carte-sauvegardee .informations-espace {
-  flex: 1;
-}
-.carte-sauvegardee .informations-espace h2 {
-  margin: 0 0 8px;
-}
-.carte-sauvegardee .informations-espace p {
-  margin: 5px 0;
-}
-
 .carte-sauvegardee a {
   background-color: #38bdf8;
   color: #ffffff;
@@ -430,6 +406,15 @@ body {
   padding: 8px 12px;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
+}
+.carte-sauvegardee .informations-espace {
+  flex: 1;
+}
+.carte-sauvegardee .informations-espace h2 {
+  margin: 0 0 8px;
+}
+.carte-sauvegardee .informations-espace p {
+  margin: 5px 0;
 }
 
 .liste-sauvegardes {
@@ -764,16 +749,6 @@ body {
 
 .reponse-contact {
   background-color: #BAE6FD;
-}
-
-.titre-information {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.titre-information img {
-  width: 20px;
-  height: 20px;
 }
 
 @media (max-width: 600px) {

@@ -1,0 +1,11 @@
+// centre un contenu avec une largeur maximale
+@mixin contenu-centre {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// disposition des element en colonne
+@mixin disposition-colonne {
+    flex-direction: column;
+}

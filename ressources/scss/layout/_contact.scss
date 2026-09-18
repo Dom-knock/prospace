@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+
+// page contact
 .introduction-contact {
     background-color: $couleur-fond-sombre;
     color: $couleur-blanche;
@@ -223,17 +226,7 @@
     background-color: $couleur-bleu-clair;
 }
 
-.titre-information {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    img {
-        width: 20px;
-        height: 20px;
-    }
-}
-
+// adaptation en responsive
 @media (max-width: 600px) {
 
     .contact-principal {
